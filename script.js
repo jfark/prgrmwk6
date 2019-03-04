@@ -93,7 +93,7 @@ document.getElementById('BtnDemosthenes').addEventListener('click', function(){
 });
 
 var i = 0
-(i < speechesArray.length){
-	console.log()
+while (i < speechesArray.length){
+	console.log("This speech is written by " + speechesArray[i].author + ".")
 	i += 1;
 }
