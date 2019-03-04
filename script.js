@@ -25,9 +25,13 @@ document.getElementById('BtnDonate').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Donate" button.
   favoriteSpeechPrompt = window.prompt('Which speech author is your favorite?');
 
-  for (i=0; i<speechesArray.length; i++) {
-  console.log (speechesArray[i].author + " was " + speechesArray[i].authorAge + " during this speech.");
-}
+  if(favoriteSpeechPrompt === "Churchill" || favoriteSpeechPrompt === "Ghandi" || favoriteSpeechPrompt === "Demosthenes") {
+	  for (i=0; i<speechesArray.length; i++) {
+	  console.log (speechesArray[i].author + " was " + speechesArray[i].authorAge + " during this speech.");
+		} 
+	} else {
+		console.log ("Did you spell that correctly?")
+		}
 });
 
 document.getElementById('BtnChurchill').addEventListener('click', function(){
