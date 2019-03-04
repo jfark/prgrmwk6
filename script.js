@@ -21,6 +21,7 @@ var churchillSpeech = {
     userNamePrompt,
     favoriteSpeechPrompt;
 
+//Second Prompt
 document.getElementById('BtnDonate').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Donate" button.
   favoriteSpeechPrompt = window.prompt('Which speech author is your favorite?');
@@ -29,13 +30,21 @@ document.getElementById('BtnDonate').addEventListener('click', function(){
 		if(favoriteSpeechPrompt === speechesArray[i].author){
 			console.log (speechesArray[i].author + " was " + speechesArray[i].authorAge + " during this speech.");
 		}else{
-			console.log("Spell check?");
+			if(favoriteSpeechPrompt !== "Churchill" && favoriteSpeechPrompt !== "Ghandi" && favoriteSpeechPrompt !== "Demosthenes"){
+				console.log("Did you spell your response correctly?");
+			}	
 		}
-}
+	}
 });
 
 document.getElementById('BtnChurchill').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Churchill" button.
+
+//Third Prompt
+oldestSpeech = speechesArray[0].year,
+	newestSpeech = speechesArray[0].year;
+	
+	 
   console.log('This speech was written by ' + speechesArray[0].author + ' in ' + speechesArray[0].year);
 
   if(speechesArray[0].yearIsBCE === true){
@@ -85,6 +94,7 @@ document.getElementById('BtnDemosthenes').addEventListener('click', function(){
   }
 });
 
+//First Prompt
 var i = 0
 while (i < speechesArray.length){
 	console.log("This speech is written by " + speechesArray[i].author + ".")
