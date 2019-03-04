@@ -91,13 +91,3 @@ document.getElementById('BtnDemosthenes').addEventListener('click', function(){
     console.log('This is the most recent speech on the page.');
   }
 });
-
-
-userNamePrompt = window.prompt('Hello, what is your name?');
-
-if(typeof userNamePrompt === 'string' && userNamePrompt !== ''){
-  console.log('Hi ' + userNamePrompt + '!');
-}else{
-  console.log('Ok, I\'ll just call you User.');
-  userNamePrompt = 'User';
-}
