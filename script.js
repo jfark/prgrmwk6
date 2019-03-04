@@ -91,3 +91,9 @@ document.getElementById('BtnDemosthenes').addEventListener('click', function(){
     console.log('This is the most recent speech on the page.');
   }
 });
+
+var i = 0
+(i < speechesArray.length){
+	console.log()
+	i += 1;
+}
